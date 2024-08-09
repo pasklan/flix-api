@@ -4,11 +4,11 @@ from genres.models import Genre
 
 
 class Movie(models.Model):
-  title = models.CharField(max_length=500)
-  genre = models.ForeignKey(Genre, on_delete=models.PROTECT, related_name='movies')
-  release_date = models.DateField(auto_now=False, auto_now_add=False, null=True, blank=True)
-  actors = models.ManyToManyField(Actor, related_name='movies')
-  resume = models.TextField(null=True, blank=True)
+    title = models.CharField(max_length=500)
+    genre = models.ForeignKey(Genre, on_delete=models.PROTECT, related_name='movies')
+    release_date = models.DateField(auto_now=False, auto_now_add=False, null=True, blank=True)
+    actors = models.ManyToManyField(Actor, related_name='movies')
+    resume = models.TextField(null=True, blank=True)
 
-  def __str__(self):
-      return self.title
+    def __str__(self):
+        return self.title

@@ -11,6 +11,7 @@ class MovieSerializer(serializers.ModelSerializer):
         model = Movie
         fields = '__all__'
 
+
 class MoviewDetailSerializaser(serializers.ModelSerializer):
     genre = GenreSerializer()
     actors = ActorSerializer(many=True)
